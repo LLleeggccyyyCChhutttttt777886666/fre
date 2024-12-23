@@ -8,10 +8,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7505554974:AAFWk0SO-3xLayoP90h6x01SdN2WrrP2YOU')
+bot = telebot.TeleBot('7331346693:AAGune3EG_XPv5N0BbPNZ4GPlLKFUWcGiA4')
 
 # Admin user IDs
-admin_id = {"1329951770"}
+admin_id = {"1216702307"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -48,7 +48,7 @@ allowed_user_ids = read_users()
 def log_command(user_id, target, port, time):
     user_info = bot.get_chat(user_id)
     if user_info.username:
-        username = "@MR_SID_001 \n @NINJAGAMEROP" + user_info.username
+        username = "@God_x_Sikandar \n @God_x_Sikandar" + user_info.username
     else:
         username = f"UserID: {user_id}"
     
@@ -99,7 +99,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID to add 😒."
     else:
-        response = "ONLY OWNER CAN USE."
+        response = "ONLY OWNER CAN USE @God_x_Sikandar."
 
     bot.reply_to(message, response)
 
@@ -124,7 +124,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
 ✅ Usage: /remove <userid>'''
     else:
-        response = "ONLY OWNER CAN USE."
+        response = "ONLY OWNER CAN USE @God_x_Sikandar"
 
     bot.reply_to(message, response)
 
@@ -144,7 +144,7 @@ def clear_logs_command(message):
         except FileNotFoundError:
             response = "Logs are already cleared ."
     else:
-        response = "ONLY OWNER CAN USE."
+        response = "ONLY OWNER CAN USE @God_x_Sikandar"
     bot.reply_to(message, response)
 
  
