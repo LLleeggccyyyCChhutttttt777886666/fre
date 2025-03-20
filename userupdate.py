@@ -9,7 +9,7 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '7331346693:AAHrBbh9YoahLVPdJElWtDA1q2Q02IGgvxA'  # Replace with your bot token
+TELEGRAM_BOT_TOKEN = '7331346693:AAFaGH6uDfKOjXHOy3si9A7v4NghduJq1n8'  # Replace with your bot token
 ADMIN_USER_ID = 1216702307
 MONGO_URI = "mongodb+srv://donmourya248:Santosh700@redhat.drq43.mongodb.net/RedHat?retryWrites=true&w=majority&appName=RedHat"
 DB_NAME = "Sikandar"
