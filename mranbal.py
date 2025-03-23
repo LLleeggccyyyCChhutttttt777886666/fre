@@ -14,9 +14,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Telegram API & MongoDB credentials (REPLACE WITH YOURS)
-TELEGRAM_BOT_TOKEN = "6704057021:AAGRYY_9JDCAntYI3lFEO-N08kZWi1KMXzQ"
-MONGO_URI = "mongodb+srv://satyam:ranbal1@satyam.ftaww.mongodb.net/?retryWrites=true&w=majority&appName=satyam"
-DB_NAME = "TEST"
+TELEGRAM_BOT_TOKEN = "7608024904:AAEzpdFPCHzmGi5WXKneCZnJ6RNaHQR17AY"
+MONGO_URI = "mongodb+srv://donmourya248:Santosh700@redhat.drq43.mongodb.net/RedHat?retryWrites=true&w=majority&appName=RedHat"
+DB_NAME = "Monsterr"
 
 # Database setup
 client = MongoClient(MONGO_URI)
@@ -26,7 +26,7 @@ aws_vps_collection = db["aws_vps_list"]
 approved_users_collection = db["approved_users"]
 settings_collection = db["settings"]
 
-ADMIN_USER_ID =  5759284972 # Replace with your Telegram Admin ID
+ADMIN_USER_ID =  1216702307 # Replace with your Telegram Admin ID
 SSH_SEMAPHORE = asyncio.Semaphore(100)
 
 # Directory for storing .pem files
